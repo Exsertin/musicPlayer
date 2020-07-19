@@ -5,6 +5,6 @@ target 'musicPlayer' do
   use_frameworks!
 
   # Pods for musicPlayer
-  
+  pod 'Alamofire', '~> 4.9.0'
 
 end
