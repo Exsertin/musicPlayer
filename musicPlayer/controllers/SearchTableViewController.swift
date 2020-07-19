@@ -15,9 +15,39 @@ class SearchTableViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    searchBar.delegate = self
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return songs.count
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+    let song = songs[indexPath.row]
+    cell.textLabel?.text = "\(song.artistName) - \(song.trackName)"
+    
+    return cell
+  }
+}
+
+extension SearchTableViewController: UISearchBarDelegate {
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    let minLen = 2
+    
+    guard searchText.count > minLen else {
+      songs = []
+      self.tableView.reloadData()
+      return
+    }
+    
+    searchSongs(str: searchText.lowercased())
+  }
+  
+  private func searchSongs(str: String) {
+    ITunesApiManager(ITunesApi()).findSongs(searchText: str) {
+      self.songs = $0
+      self.tableView.reloadData()
+    }
   }
 }
