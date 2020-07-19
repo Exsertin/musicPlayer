@@ -14,6 +14,7 @@
 		F1B7314824C4C17F00F3FE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B7314724C4C17F00F3FE6B /* Assets.xcassets */; };
 		F1B7314B24C4C17F00F3FE6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B7314924C4C17F00F3FE6B /* LaunchScreen.storyboard */; };
 		F1B7315424C4CE8900F3FE6B /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315324C4CE8900F3FE6B /* SearchTableViewController.swift */; };
+		F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315724C4D4C900F3FE6B /* ITunesResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		F1B7314A24C4C17F00F3FE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1B7314C24C4C17F00F3FE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1B7315324C4CE8900F3FE6B /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		F1B7315724C4D4C900F3FE6B /* ITunesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesResult.swift; sourceTree = "<group>"; };
 		FBF2F918EEAA52671E868C03 /* Pods_musicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,8 +96,17 @@
 		F1B7315524C4D44300F3FE6B /* api */ = {
 			isa = PBXGroup;
 			children = (
+				F1B7315624C4D4A100F3FE6B /* models */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		F1B7315624C4D4A100F3FE6B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F1B7315724C4D4C900F3FE6B /* ITunesResult.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		FAE3507256AFEE513BC4C4BC /* Pods */ = {
@@ -222,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */,
 				F1B7313F24C4C17D00F3FE6B /* AppDelegate.swift in Sources */,
 				F1B7315424C4CE8900F3FE6B /* SearchTableViewController.swift in Sources */,
 				F1B7314124C4C17D00F3FE6B /* SceneDelegate.swift in Sources */,
