@@ -36,14 +36,19 @@ extension SearchTableViewController: UISearchBarDelegate {
     let minLen = 2
     
     guard searchText.count > minLen else {
+      cancelTargetNoSongs()
       songs = []
       self.tableView.reloadData()
       return
     }
     
     searchSongs(str: searchText.lowercased())
-    NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(noSongs), object: nil)
+    cancelTargetNoSongs()
     self.perform(#selector(noSongs), with: nil, afterDelay: 3)
+  }
+  
+  private func cancelTargetNoSongs() {
+    NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(noSongs), object: nil)
   }
   
   @objc func noSongs() {
