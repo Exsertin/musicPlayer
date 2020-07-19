@@ -42,6 +42,16 @@ extension SearchTableViewController: UISearchBarDelegate {
     }
     
     searchSongs(str: searchText.lowercased())
+    NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(noSongs), object: nil)
+    self.perform(#selector(noSongs), with: nil, afterDelay: 3)
+  }
+  
+  @objc func noSongs() {
+    guard songs.isEmpty else {
+      return
+    }
+    
+    present(AlertCreator.notification(message: "No songs found"), animated: true, completion: nil)
   }
   
   private func searchSongs(str: String) {
