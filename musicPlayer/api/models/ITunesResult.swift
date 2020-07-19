@@ -10,10 +10,10 @@ struct ITunesResult: Decodable {
   struct Result: Decodable {
     var kind: String
     var artistName: String
-    var collectionName: String
+    var collectionName: String?
     var trackName: String
-    var previewUrl: String
-    var artworkUrl100: String
+    var previewUrl: String?
+    var artworkUrl100: String?
   }
   
   var resultCount: Int
