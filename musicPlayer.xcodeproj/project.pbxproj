@@ -21,6 +21,7 @@
 		F1B7316024C4DDB000F3FE6B /* ITunesApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315F24C4DDB000F3FE6B /* ITunesApiManager.swift */; };
 		F1B7316224C4DEB100F3FE6B /* ApiResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316124C4DEB100F3FE6B /* ApiResponseDecoder.swift */; };
 		F1B7316424C4DED800F3FE6B /* JsonApiResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316324C4DED800F3FE6B /* JsonApiResponseDecoder.swift */; };
+		F1B7316624C4F55400F3FE6B /* AlertCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316524C4F55400F3FE6B /* AlertCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F1B7315F24C4DDB000F3FE6B /* ITunesApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesApiManager.swift; sourceTree = "<group>"; };
 		F1B7316124C4DEB100F3FE6B /* ApiResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseDecoder.swift; sourceTree = "<group>"; };
 		F1B7316324C4DED800F3FE6B /* JsonApiResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonApiResponseDecoder.swift; sourceTree = "<group>"; };
+		F1B7316524C4F55400F3FE6B /* AlertCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreator.swift; sourceTree = "<group>"; };
 		FBF2F918EEAA52671E868C03 /* Pods_musicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				F1B7314724C4C17F00F3FE6B /* Assets.xcassets */,
 				F1B7314924C4C17F00F3FE6B /* LaunchScreen.storyboard */,
 				F1B7314C24C4C17F00F3FE6B /* Info.plist */,
+				F1B7316524C4F55400F3FE6B /* AlertCreator.swift */,
 			);
 			path = musicPlayer;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */,
 				F1B7313F24C4C17D00F3FE6B /* AppDelegate.swift in Sources */,
 				F1B7315E24C4DD3E00F3FE6B /* ApiManager.swift in Sources */,
+				F1B7316624C4F55400F3FE6B /* AlertCreator.swift in Sources */,
 				F1B7315424C4CE8900F3FE6B /* SearchTableViewController.swift in Sources */,
 				F1B7315A24C4D8BE00F3FE6B /* Api.swift in Sources */,
 				F1B7316024C4DDB000F3FE6B /* ITunesApiManager.swift in Sources */,
