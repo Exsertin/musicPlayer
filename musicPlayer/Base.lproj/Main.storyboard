@@ -35,6 +35,9 @@
                             <outlet property="delegate" destination="R5z-dI-xGl" id="n4F-Ym-zNh"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="TYx-eq-1oT" id="hb1-3l-J5Y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kId-jL-KKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

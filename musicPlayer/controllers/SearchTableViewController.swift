@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchTableViewController: UITableViewController {
+  @IBOutlet var searchBar: UISearchBar!
   
   var songs: [ITunesResult.Result] = []
   
