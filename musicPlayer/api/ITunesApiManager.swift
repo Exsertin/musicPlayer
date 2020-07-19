@@ -13,7 +13,20 @@ class ITunesApiManager: ApiManager {
     self.api = api
   }
   
-  func findSongs(searchText: String, completion: @escaping (ITunesResult) -> Void) {
-    api.getResult(searchText: searchText) { $0 }
+  func findSongs(searchText: String, completion: @escaping ([ITunesResult.Result]) -> Void) {
+    api.getResult(searchText: searchText) {
+      let decoder = JsonApiResponseDecoder<ITunesResult>()
+      let model: ITunesResult?
+      
+      do{
+        model = try decoder.decodeToObject(string: $0)
+      } catch let error {
+        print("ERROR JSON")
+        print(error)
+        return
+      }
+      
+      completion(model!.results)
+    }
   }
 }

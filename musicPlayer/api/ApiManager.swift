@@ -7,5 +7,5 @@
 //
 
 protocol ApiManager {
-  func findSongs(searchText: String, completion: @escaping (ITunesResult) -> Void)
+  func findSongs(searchText: String, completion: @escaping ([ITunesResult.Result]) -> Void)
 }
