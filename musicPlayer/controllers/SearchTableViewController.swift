@@ -9,8 +9,14 @@
 import UIKit
 
 class SearchTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+  
+  var songs: [ITunesResult.Result] = []
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return songs.count
+  }
 }
