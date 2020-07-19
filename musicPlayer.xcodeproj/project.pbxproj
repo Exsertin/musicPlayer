@@ -17,6 +17,8 @@
 		F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315724C4D4C900F3FE6B /* ITunesResult.swift */; };
 		F1B7315A24C4D8BE00F3FE6B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315924C4D8BE00F3FE6B /* Api.swift */; };
 		F1B7315C24C4D90700F3FE6B /* ITunesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315B24C4D90700F3FE6B /* ITunesApi.swift */; };
+		F1B7315E24C4DD3E00F3FE6B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315D24C4DD3E00F3FE6B /* ApiManager.swift */; };
+		F1B7316024C4DDB000F3FE6B /* ITunesApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7315F24C4DDB000F3FE6B /* ITunesApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		F1B7315724C4D4C900F3FE6B /* ITunesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesResult.swift; sourceTree = "<group>"; };
 		F1B7315924C4D8BE00F3FE6B /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		F1B7315B24C4D90700F3FE6B /* ITunesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesApi.swift; sourceTree = "<group>"; };
+		F1B7315D24C4DD3E00F3FE6B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F1B7315F24C4DDB000F3FE6B /* ITunesApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesApiManager.swift; sourceTree = "<group>"; };
 		FBF2F918EEAA52671E868C03 /* Pods_musicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,8 @@
 				F1B7315624C4D4A100F3FE6B /* models */,
 				F1B7315924C4D8BE00F3FE6B /* Api.swift */,
 				F1B7315B24C4D90700F3FE6B /* ITunesApi.swift */,
+				F1B7315D24C4DD3E00F3FE6B /* ApiManager.swift */,
+				F1B7315F24C4DDB000F3FE6B /* ITunesApiManager.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -242,8 +248,10 @@
 				F1B7315C24C4D90700F3FE6B /* ITunesApi.swift in Sources */,
 				F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */,
 				F1B7313F24C4C17D00F3FE6B /* AppDelegate.swift in Sources */,
+				F1B7315E24C4DD3E00F3FE6B /* ApiManager.swift in Sources */,
 				F1B7315424C4CE8900F3FE6B /* SearchTableViewController.swift in Sources */,
 				F1B7315A24C4D8BE00F3FE6B /* Api.swift in Sources */,
+				F1B7316024C4DDB000F3FE6B /* ITunesApiManager.swift in Sources */,
 				F1B7314124C4C17D00F3FE6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
