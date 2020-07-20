@@ -16,6 +16,7 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
   
   init(track: TrackProtocol) {
     self.track = track
+    player = AVPlayer(url: URL(string: track.getTrackPreviewUrl())!)
   }
   
   func setViewDelegate(viewDelegate: MusicPlayerViewDelegate?) {
