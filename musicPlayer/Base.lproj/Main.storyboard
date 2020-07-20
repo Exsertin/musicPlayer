@@ -127,6 +127,9 @@
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uLy-fI-bzG">
                                 <rect key="frame" x="38" y="732" width="338" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChangedAction:" destination="GX2-zc-XLd" eventType="valueChanged" id="5SV-MU-qhZ"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifn-ra-KsD">
                                 <rect key="frame" x="40" y="767" width="93" height="21"/>

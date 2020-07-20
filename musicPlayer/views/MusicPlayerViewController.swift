@@ -32,6 +32,10 @@ class MusicPlayerViewController: UIViewController {
   @IBAction func playPauseAction(_ sender: UIButton) {
     presenter.playPausePlayer()
   }
+  
+  @IBAction func sliderValueChangedAction(_ sender: UISlider) {
+    presenter.changePlayerTimeLine(value: sender.value)
+  }
 }
 
 extension MusicPlayerViewController: MusicPlayerViewDelegate {
