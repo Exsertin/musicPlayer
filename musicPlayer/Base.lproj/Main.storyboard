@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="207" y="29"/>
         </scene>
-        <!--Music Player View Controller-->
+        <!--Music Player-->
         <scene sceneID="NEr-l6-Vhw">
             <objects>
                 <viewController id="GX2-zc-XLd" customClass="MusicPlayerViewController" customModule="musicPlayer" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PJB-op-FtL"/>
+                    <navigationItem key="navigationItem" title="Music Player" id="PJB-op-FtL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mC-YC-C4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
