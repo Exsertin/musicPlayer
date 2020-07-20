@@ -23,6 +23,20 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
     self.viewDelegate = viewDelegate
   }
   
+  func viewDidLoadDelegate() {
+    guard let delegate = viewDelegate else {
+      return
+    }
+    
+    ITunesApiManager(ITunesApi()).loadArtwork(track: track) {
+      delegate.setArtworkImage(data: $0)
+    }
+    
+    delegate.setArtistName(text: track.getArtistName())
+    delegate.setTrackName(text: track.getTrackName())
+    delegate.setCollectionName(text: track.getCollectionName())
+  }
+  
   func playPausePlayer() {
     if #available(iOS 10.0, *) {
       player.timeControlStatus == .paused ? player.play() : player.pause()
