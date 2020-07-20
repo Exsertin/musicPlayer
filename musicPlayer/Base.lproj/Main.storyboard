@@ -118,9 +118,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-Fk-DTZ">
+                                <rect key="frame" x="192" y="802" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="EYW-6s-vyC" firstAttribute="top" secondItem="2q6-Fk-DTZ" secondAttribute="bottom" constant="30" id="0Jf-jM-Vav"/>
                             <constraint firstItem="ETd-HY-Pon" firstAttribute="leading" secondItem="I1d-y5-OUC" secondAttribute="trailing" constant="8" id="8dv-EG-17K"/>
                             <constraint firstItem="SLb-rw-LxJ" firstAttribute="top" secondItem="UMZ-wJ-k7o" secondAttribute="bottom" constant="10" id="IFa-TJ-NA5"/>
                             <constraint firstItem="SLb-rw-LxJ" firstAttribute="leading" secondItem="CBl-tL-zoU" secondAttribute="leadingMargin" constant="10" id="NfD-mp-XoW"/>
@@ -133,6 +138,7 @@
                             <constraint firstItem="BBo-O5-C0L" firstAttribute="leading" secondItem="UMZ-wJ-k7o" secondAttribute="trailing" constant="8" id="nme-4W-plx"/>
                             <constraint firstItem="BBo-O5-C0L" firstAttribute="top" secondItem="ETd-HY-Pon" secondAttribute="bottom" constant="10" id="qua-2g-zBR"/>
                             <constraint firstItem="I1d-y5-OUC" firstAttribute="leading" secondItem="CBl-tL-zoU" secondAttribute="leadingMargin" constant="8" id="t1b-Da-e4C"/>
+                            <constraint firstItem="2q6-Fk-DTZ" firstAttribute="centerX" secondItem="CBl-tL-zoU" secondAttribute="centerX" id="vOl-Tw-7R1"/>
                             <constraint firstItem="UMZ-wJ-k7o" firstAttribute="leading" secondItem="CBl-tL-zoU" secondAttribute="leadingMargin" constant="8" id="vyS-xA-Ol7"/>
                             <constraint firstItem="UMZ-wJ-k7o" firstAttribute="top" secondItem="I1d-y5-OUC" secondAttribute="bottom" constant="10" id="wRl-rY-q12"/>
                         </constraints>
