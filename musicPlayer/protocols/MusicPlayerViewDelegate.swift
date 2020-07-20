@@ -13,4 +13,6 @@ protocol MusicPlayerViewDelegate: class {
   func setArtistName(text: String)
   func setTrackName(text: String)
   func setCollectionName(text: String)
+  func setPlayTitle()
+  func setPauseTitle()
 }

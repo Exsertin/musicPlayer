@@ -17,15 +17,19 @@ class MusicPlayerViewController: UIViewController {
   @IBOutlet weak var currentTimeLabel: UILabel!
   @IBOutlet weak var endTimeLabel: UILabel!
   
+  let playTitle = "play"
+  let pauseTitle = "pause"
   
   var presenter: MusicPlayerPresenterProtocol!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     presenter.setViewDelegate(viewDelegate: self)
+    presenter.viewDidLoadDelegate()
   }
   
   @IBAction func playPauseAction(_ sender: UIButton) {
+    presenter.playPausePlayer()
   }
 }
 
@@ -44,5 +48,11 @@ extension MusicPlayerViewController: MusicPlayerViewDelegate {
   
   func setCollectionName(text: String) {
     collectionNameLabel.text = text
+  }
+  
+  func setPlayTitle() {
+  }
+  
+  func setPauseTitle() {
   }
 }
