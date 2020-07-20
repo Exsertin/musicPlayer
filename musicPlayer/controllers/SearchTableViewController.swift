@@ -11,6 +11,8 @@ import UIKit
 class SearchTableViewController: UITableViewController {
   @IBOutlet var searchBar: UISearchBar!
   
+  let segueMusicPlayerId: String = "showMusicPlayer"
+  
   var songs: [ITunesResult.Result] = []
   
   override func viewDidLoad() {
@@ -28,6 +30,27 @@ class SearchTableViewController: UITableViewController {
     cell.textLabel?.text = "\(song.artistName) - \(song.trackName)"
     
     return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: segueMusicPlayerId, sender: indexPath)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case segueMusicPlayerId:
+      guard let destination = segue.destination as? MusicPlayerViewController else {
+        return
+      }
+      
+      guard let indexPath = sender as? IndexPath else {
+        return
+      }
+      
+      destination.presenter = MusicPlayerPresenter(song: songs[indexPath.row])
+    default:
+      return
+    }
   }
 }
 
