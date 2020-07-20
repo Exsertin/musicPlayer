@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="O6m-cl-lZR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gmJ-UG-OPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="xaV-qu-J8O" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tv0-xT-sQI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -20,13 +19,13 @@
                         <segue destination="R5z-dI-xGl" kind="relationship" relationship="rootViewController" id="lQP-6g-d0q"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmJ-UG-OPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-655" y="29"/>
         </scene>
-        <!--Search Table View Controller-->
+        <!--Search Page-->
         <scene sceneID="ZAk-uv-fsN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kId-jL-KKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="R5z-dI-xGl" customClass="SearchTableViewController" customModule="musicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="026-3i-2si">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -52,11 +51,12 @@
                             <outlet property="delegate" destination="R5z-dI-xGl" id="n4F-Ym-zNh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vEB-Oj-Rp0"/>
+                    <navigationItem key="navigationItem" title="Search Page" id="vEB-Oj-Rp0"/>
                     <connections>
                         <outlet property="searchBar" destination="TYx-eq-1oT" id="hb1-3l-J5Y"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kId-jL-KKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="207" y="29"/>
         </scene>
