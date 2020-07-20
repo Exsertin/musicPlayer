@@ -7,5 +7,6 @@
 //
 
 protocol MusicPlayerPresenterProtocol {
-  
+  func setViewDelegate(viewDelegate: MusicPlayerViewDelegate?)
+  func playPausePlayer()
 }
