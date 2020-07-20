@@ -9,9 +9,10 @@
 import UIKit
 
 class MusicPlayerViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+  var presenter: MusicPlayerPresenter!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+  }
 }
