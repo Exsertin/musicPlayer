@@ -122,12 +122,10 @@
 		F1B7315524C4D44300F3FE6B /* api */ = {
 			isa = PBXGroup;
 			children = (
+				F1B7317224C577B700F3FE6B /* protocols */,
 				F1B7315624C4D4A100F3FE6B /* models */,
-				F1B7315924C4D8BE00F3FE6B /* Api.swift */,
 				F1B7315B24C4D90700F3FE6B /* ITunesApi.swift */,
-				F1B7315D24C4DD3E00F3FE6B /* ApiManager.swift */,
 				F1B7315F24C4DDB000F3FE6B /* ITunesApiManager.swift */,
-				F1B7316124C4DEB100F3FE6B /* ApiResponseDecoder.swift */,
 				F1B7316324C4DED800F3FE6B /* JsonApiResponseDecoder.swift */,
 			);
 			path = api;
@@ -162,6 +160,16 @@
 			children = (
 				F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */,
 				F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		F1B7317224C577B700F3FE6B /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F1B7315924C4D8BE00F3FE6B /* Api.swift */,
+				F1B7315D24C4DD3E00F3FE6B /* ApiManager.swift */,
+				F1B7316124C4DEB100F3FE6B /* ApiResponseDecoder.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
