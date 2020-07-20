@@ -25,3 +25,25 @@ struct ITunesResult: Decodable {
   var resultCount: Int
   var results: [Result]
 }
+
+extension ITunesResult.Result: TrackProtocol {
+  func getArtworkPreviewUrl() -> String? {
+    return artworkUrl100
+  }
+  
+  func getTrackPreviewUrl() -> String {
+     return previewUrl!
+   }
+  
+  func getArtistName() -> String {
+    return artistName
+  }
+  
+  func getTrackName() -> String {
+    return trackName
+  }
+  
+  func getCollectionName() -> String {
+    return collectionName!
+  }
+}
