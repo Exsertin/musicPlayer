@@ -12,11 +12,13 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
   var player: AVPlayer!
   
   private var track: TrackProtocol
+  private var trackMaxTime: Float
   weak private var viewDelegate: MusicPlayerViewDelegate?
   
   init(track: TrackProtocol) {
     self.track = track
     player = AVPlayer(url: URL(string: track.getTrackPreviewUrl())!)
+    trackMaxTime = Float(player.currentItem?.asset.duration.seconds ?? 0)
   }
   
   func setViewDelegate(viewDelegate: MusicPlayerViewDelegate?) {
@@ -35,6 +37,26 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
     delegate.setArtistName(text: track.getArtistName())
     delegate.setTrackName(text: track.getTrackName())
     delegate.setCollectionName(text: track.getCollectionName())
+    delegate.updateSliderMaxValue(value: trackMaxTime)
+    delegate.updateSliderValue(value: 0)
+    delegate.updateCurrentTime(str: "0:00")
+    delegate.updateEndTime(str: TimeTranslator.translateSecondsToMinutes(seconds: Int(trackMaxTime)))
+    addPeriodicToPlayer()
+  }
+  
+  private func addPeriodicToPlayer() {
+    guard let delegate = viewDelegate else {
+      return
+    }
+    
+    let cmTime = CMTime(seconds: 1, preferredTimescale: 1000)
+    player.addPeriodicTimeObserver(forInterval: cmTime, queue: DispatchQueue.main) { time in
+      delegate.updateCurrentTime(str: TimeTranslator.translateSecondsToMinutes(seconds: Int(time.seconds)))
+      delegate.updateSliderValue(value: Float(time.seconds))
+      let maxTime = Int(self.trackMaxTime) - Int(time.seconds)
+      let currentMaxTime = TimeTranslator.translateSecondsToMinutes(seconds: maxTime)
+      delegate.updateEndTime(str: "\(currentMaxTime)")
+    }
   }
   
   func playPausePlayer() {
