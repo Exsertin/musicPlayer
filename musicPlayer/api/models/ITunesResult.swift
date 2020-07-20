@@ -8,12 +8,18 @@
 
 struct ITunesResult: Decodable {
   struct Result: Decodable {
+    let typeTrack = "track"
+    
     var wrapperType: String
     var artistName: String
     var collectionName: String?
     var trackName: String
     var previewUrl: String?
     var artworkUrl100: String?
+    
+    func isTrack() -> Bool {
+      return wrapperType == typeTrack
+    }
   }
   
   var resultCount: Int
