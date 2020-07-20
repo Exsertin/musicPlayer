@@ -58,4 +58,20 @@ extension MusicPlayerViewController: MusicPlayerViewDelegate {
   func setPauseTitle() {
     playPauseButton.setTitle(pauseTitle, for: .normal)
   }
+  
+  func updateCurrentTime(str: String) {
+    currentTimeLabel.text = str
+  }
+  
+  func updateEndTime(str: String) {
+    endTimeLabel.text = str
+  }
+  
+  func updateSliderValue(value: Float) {
+    slider.value = value
+  }
+  
+  func updateSliderMaxValue(value: Float) {
+    slider.maximumValue = value
+  }
 }

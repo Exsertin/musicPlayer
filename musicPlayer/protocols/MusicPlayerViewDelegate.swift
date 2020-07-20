@@ -15,4 +15,8 @@ protocol MusicPlayerViewDelegate: class {
   func setCollectionName(text: String)
   func setPlayTitle()
   func setPauseTitle()
+  func updateCurrentTime(str: String)
+  func updateEndTime(str: String)
+  func updateSliderValue(value: Float)
+  func updateSliderMaxValue(value: Float)
 }
