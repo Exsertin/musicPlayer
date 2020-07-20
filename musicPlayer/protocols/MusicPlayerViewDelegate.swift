@@ -6,6 +6,6 @@
 //  Copyright © 2020 Exsertin. All rights reserved.
 //
 
-protocol MusicPlayerViewDelegate {
+protocol MusicPlayerViewDelegate: class {
   
 }

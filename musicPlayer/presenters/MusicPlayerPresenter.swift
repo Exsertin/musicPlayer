@@ -8,7 +8,7 @@
 
 class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
   private var track: TrackProtocol
-  private var viewDelegate: MusicPlayerViewDelegate?
+  weak private var viewDelegate: MusicPlayerViewDelegate?
   
   init(track: TrackProtocol) {
     self.track = track
