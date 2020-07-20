@@ -49,14 +49,14 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
       return
     }
     
-    let cmTime = CMTime(seconds: 1, preferredTimescale: 1000)
-    player.addPeriodicTimeObserver(forInterval: cmTime, queue: DispatchQueue.main) { time in
+    let forInterval = CMTime(seconds: 1, preferredTimescale: 1000)
+    player.addPeriodicTimeObserver(forInterval: forInterval, queue: DispatchQueue.main) { time in
       let seconds = time.seconds.rounded()
       delegate.updateCurrentTime(str: TimeTranslator.translateSecondsToMinutes(seconds: Int(seconds)))
       delegate.updateSliderValue(value: Float(time.seconds))
-      let maxTime = Int(self.trackMaxTime) - Int(seconds)
-      let currentMaxTime = TimeTranslator.translateSecondsToMinutes(seconds: maxTime)
-      delegate.updateEndTime(str: "\(currentMaxTime)")
+      let endSeconds = Int(self.trackMaxTime) - Int(seconds)
+      let endTime = TimeTranslator.translateSecondsToMinutes(seconds: endSeconds)
+      delegate.updateEndTime(str: "\(endTime)")
     }
   }
   
