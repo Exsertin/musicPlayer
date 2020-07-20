@@ -26,6 +26,7 @@
 		F1B7316C24C56CBE00F3FE6B /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316B24C56CBE00F3FE6B /* MusicPlayerPresenter.swift */; };
 		F1B7316F24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */; };
 		F1B7317124C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */; };
+		F1B7317424C5793000F3FE6B /* TrackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317324C5793000F3FE6B /* TrackProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		F1B7316B24C56CBE00F3FE6B /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
 		F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewDelegate.swift; sourceTree = "<group>"; };
 		F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterProtocol.swift; sourceTree = "<group>"; };
+		F1B7317324C5793000F3FE6B /* TrackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackProtocol.swift; sourceTree = "<group>"; };
 		FBF2F918EEAA52671E868C03 /* Pods_musicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				F1B7315924C4D8BE00F3FE6B /* Api.swift */,
 				F1B7315D24C4DD3E00F3FE6B /* ApiManager.swift */,
 				F1B7316124C4DEB100F3FE6B /* ApiResponseDecoder.swift */,
+				F1B7317324C5793000F3FE6B /* TrackProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				F1B7316424C4DED800F3FE6B /* JsonApiResponseDecoder.swift in Sources */,
 				F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */,
 				F1B7313F24C4C17D00F3FE6B /* AppDelegate.swift in Sources */,
+				F1B7317424C5793000F3FE6B /* TrackProtocol.swift in Sources */,
 				F1B7315E24C4DD3E00F3FE6B /* ApiManager.swift in Sources */,
 				F1B7316C24C56CBE00F3FE6B /* MusicPlayerPresenter.swift in Sources */,
 				F1B7316624C4F55400F3FE6B /* AlertCreator.swift in Sources */,
