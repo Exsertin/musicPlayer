@@ -8,6 +8,8 @@
 
 protocol TrackProtocol {
   func getArtworkPreviewUrl() -> String?
-  func getArtistName() -> String
   func getTrackPreviewUrl() -> String
+  func getArtistName() -> String
+  func getTrackName() -> String
+  func getCollectionName() -> String
 }
