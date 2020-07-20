@@ -27,6 +27,7 @@
 		F1B7316F24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */; };
 		F1B7317124C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */; };
 		F1B7317424C5793000F3FE6B /* TrackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317324C5793000F3FE6B /* TrackProtocol.swift */; };
+		F1B7317724C61EEF00F3FE6B /* TimeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317624C61EEF00F3FE6B /* TimeTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewDelegate.swift; sourceTree = "<group>"; };
 		F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterProtocol.swift; sourceTree = "<group>"; };
 		F1B7317324C5793000F3FE6B /* TrackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackProtocol.swift; sourceTree = "<group>"; };
+		F1B7317624C61EEF00F3FE6B /* TimeTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTranslator.swift; sourceTree = "<group>"; };
 		FBF2F918EEAA52671E868C03 /* Pods_musicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				F1B7315224C4CE5F00F3FE6B /* controllers */,
 				F1B7316A24C56C6B00F3FE6B /* presenters */,
 				F1B7316724C5683F00F3FE6B /* views */,
+				F1B7317524C61EDB00F3FE6B /* helpers */,
 				F1B7313E24C4C17D00F3FE6B /* AppDelegate.swift */,
 				F1B7314024C4C17D00F3FE6B /* SceneDelegate.swift */,
 				F1B7314424C4C17D00F3FE6B /* Main.storyboard */,
@@ -175,6 +178,14 @@
 				F1B7317324C5793000F3FE6B /* TrackProtocol.swift */,
 			);
 			path = protocols;
+			sourceTree = "<group>";
+		};
+		F1B7317524C61EDB00F3FE6B /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F1B7317624C61EEF00F3FE6B /* TimeTranslator.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 		FAE3507256AFEE513BC4C4BC /* Pods */ = {
@@ -303,6 +314,7 @@
 			files = (
 				F1B7315C24C4D90700F3FE6B /* ITunesApi.swift in Sources */,
 				F1B7316224C4DEB100F3FE6B /* ApiResponseDecoder.swift in Sources */,
+				F1B7317724C61EEF00F3FE6B /* TimeTranslator.swift in Sources */,
 				F1B7316424C4DED800F3FE6B /* JsonApiResponseDecoder.swift in Sources */,
 				F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */,
 				F1B7313F24C4C17D00F3FE6B /* AppDelegate.swift in Sources */,
