@@ -7,7 +7,7 @@
 //
 
 protocol TrackProtocol {
-  func getArtworkPreview() -> String?
+  func getArtworkPreviewUrl() -> String?
   func getArtistName() -> String
   func getTrackPreviewUrl() -> String?
 }
