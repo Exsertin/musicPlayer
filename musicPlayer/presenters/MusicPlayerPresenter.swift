@@ -57,6 +57,11 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
       let endSeconds = Int(self.trackMaxTime) - Int(seconds)
       let endTime = TimeTranslator.translateSecondsToMinutes(seconds: endSeconds)
       delegate.updateEndTime(str: "\(endTime)")
+      
+      if delegate.isSliderFinish() {
+        delegate.setPlayTitle()
+        self.player.seek(to: .zero)
+      }
     }
   }
   
