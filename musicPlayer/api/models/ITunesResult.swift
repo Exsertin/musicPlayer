@@ -8,7 +8,7 @@
 
 struct ITunesResult: Decodable {
   struct Result: Decodable {
-    var kind: String
+    var wrapperType: String
     var artistName: String
     var collectionName: String?
     var trackName: String
