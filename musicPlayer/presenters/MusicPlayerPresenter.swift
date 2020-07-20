@@ -38,10 +38,20 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
   }
   
   func playPausePlayer() {
+    var isPause: Bool = true
+    
     if #available(iOS 10.0, *) {
-      player.timeControlStatus == .paused ? player.play() : player.pause()
+      isPause = player.timeControlStatus == .paused
     } else {
-      player.rate == 0 ? player.play() : player.pause()
+      isPause = player.rate == 0
+    }
+    
+    if isPause {
+      viewDelegate?.setPauseTitle()
+      player.play()
+    } else {
+      viewDelegate?.setPlayTitle()
+      player.pause()
     }
   }
 }
