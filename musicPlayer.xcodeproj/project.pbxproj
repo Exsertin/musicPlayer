@@ -111,7 +111,6 @@
 				F1B7314724C4C17F00F3FE6B /* Assets.xcassets */,
 				F1B7314924C4C17F00F3FE6B /* LaunchScreen.storyboard */,
 				F1B7314C24C4C17F00F3FE6B /* Info.plist */,
-				F1B7316524C4F55400F3FE6B /* AlertCreator.swift */,
 			);
 			path = musicPlayer;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B7317624C61EEF00F3FE6B /* TimeTranslator.swift */,
+				F1B7316524C4F55400F3FE6B /* AlertCreator.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
