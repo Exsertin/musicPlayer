@@ -18,7 +18,7 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
   init(track: TrackProtocol) {
     self.track = track
     player = AVPlayer(url: URL(string: track.getTrackPreviewUrl())!)
-    trackMaxTime = Float(player.currentItem?.asset.duration.seconds ?? 0)
+    trackMaxTime = Float(player.currentItem?.asset.duration.seconds ?? 0).rounded()
   }
   
   func setViewDelegate(viewDelegate: MusicPlayerViewDelegate?) {
@@ -51,9 +51,10 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
     
     let cmTime = CMTime(seconds: 1, preferredTimescale: 1000)
     player.addPeriodicTimeObserver(forInterval: cmTime, queue: DispatchQueue.main) { time in
-      delegate.updateCurrentTime(str: TimeTranslator.translateSecondsToMinutes(seconds: Int(time.seconds)))
+      let seconds = time.seconds.rounded()
+      delegate.updateCurrentTime(str: TimeTranslator.translateSecondsToMinutes(seconds: Int(seconds)))
       delegate.updateSliderValue(value: Float(time.seconds))
-      let maxTime = Int(self.trackMaxTime) - Int(time.seconds)
+      let maxTime = Int(self.trackMaxTime) - Int(seconds)
       let currentMaxTime = TimeTranslator.translateSecondsToMinutes(seconds: maxTime)
       delegate.updateEndTime(str: "\(currentMaxTime)")
     }
