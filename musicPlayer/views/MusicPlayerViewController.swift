@@ -78,4 +78,8 @@ extension MusicPlayerViewController: MusicPlayerViewDelegate {
   func updateSliderMaxValue(value: Float) {
     slider.maximumValue = value
   }
+  
+  func isSliderFinish() -> Bool {
+    return slider.maximumValue == slider.value.rounded()
+  }
 }

@@ -19,4 +19,5 @@ protocol MusicPlayerViewDelegate: class {
   func updateEndTime(str: String)
   func updateSliderValue(value: Float)
   func updateSliderMaxValue(value: Float)
+  func isSliderFinish() -> Bool
 }
