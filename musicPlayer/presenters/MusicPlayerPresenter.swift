@@ -6,7 +6,11 @@
 //  Copyright © 2020 Exsertin. All rights reserved.
 //
 
+import MediaPlayer
+
 class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
+  var player: AVPlayer!
+  
   private var track: TrackProtocol
   weak private var viewDelegate: MusicPlayerViewDelegate?
   
@@ -16,5 +20,13 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
   
   func setViewDelegate(viewDelegate: MusicPlayerViewDelegate?) {
     self.viewDelegate = viewDelegate
+  }
+  
+  func playPausePlayer() {
+    if #available(iOS 10.0, *) {
+      player.timeControlStatus == .paused ? player.play() : player.pause()
+    } else {
+      player.rate == 0 ? player.play() : player.pause()
+    }
   }
 }
