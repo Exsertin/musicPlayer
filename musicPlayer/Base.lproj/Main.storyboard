@@ -60,5 +60,23 @@
             </objects>
             <point key="canvasLocation" x="207" y="29"/>
         </scene>
+        <!--Music Player View Controller-->
+        <scene sceneID="NEr-l6-Vhw">
+            <objects>
+                <viewController id="GX2-zc-XLd" customClass="MusicPlayerViewController" customModule="musicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4UK-N5-HeJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EYW-6s-vyC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CBl-tL-zoU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mC-YC-C4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077" y="29"/>
+        </scene>
     </scenes>
 </document>
