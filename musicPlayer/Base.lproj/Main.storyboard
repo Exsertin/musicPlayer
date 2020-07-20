@@ -121,6 +121,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-Fk-DTZ">
                                 <rect key="frame" x="192" y="802" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playPauseAction:" destination="GX2-zc-XLd" eventType="touchUpInside" id="p0p-IC-34c"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uLy-fI-bzG">
                                 <rect key="frame" x="38" y="732" width="338" height="31"/>
@@ -166,6 +169,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Music Player" id="PJB-op-FtL"/>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="ETd-HY-Pon" id="4aI-2w-cMA"/>
+                        <outlet property="artworkImageView" destination="v8U-Fo-baj" id="Fpd-28-QFL"/>
+                        <outlet property="collectionNameLabel" destination="hO6-Gz-KRY" id="j4c-I2-Tjd"/>
+                        <outlet property="currentTimeLabel" destination="ifn-ra-KsD" id="UiW-Lb-tfi"/>
+                        <outlet property="endTimeLabel" destination="MmO-Nd-OSp" id="JW5-es-Du8"/>
+                        <outlet property="slider" destination="uLy-fI-bzG" id="0je-ln-A1K"/>
+                        <outlet property="trackNameLabel" destination="BBo-O5-C0L" id="pef-wg-ddR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mC-YC-C4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
