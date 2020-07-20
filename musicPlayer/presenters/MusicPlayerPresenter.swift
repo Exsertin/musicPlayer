@@ -76,4 +76,17 @@ class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
       player.pause()
     }
   }
+  
+  func changePlayerTimeLine(value: Float) {
+    guard let delegate = viewDelegate else {
+      return
+    }
+    
+    player.seek(to: CMTime(seconds: Double(value), preferredTimescale: 1000)) { _ in
+      delegate.updateCurrentTime(str: TimeTranslator.translateSecondsToMinutes(seconds: Int(value)))
+      let endSeconds = Int(self.trackMaxTime) - Int(value)
+      let endTime = TimeTranslator.translateSecondsToMinutes(seconds: endSeconds)
+      delegate.updateEndTime(str: endTime)
+    }
+  }
 }

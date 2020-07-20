@@ -10,4 +10,5 @@ protocol MusicPlayerPresenterProtocol {
   func setViewDelegate(viewDelegate: MusicPlayerViewDelegate?)
   func viewDidLoadDelegate()
   func playPausePlayer()
+  func changePlayerTimeLine(value: Float)
 }
