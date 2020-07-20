@@ -10,5 +10,5 @@ import UIKit
 
 protocol ApiManager {
   func findSongs(searchText: String, completion: @escaping ([ITunesResult.Result]) -> Void)
-  func loadArtwork(url: String, completion: @escaping (Data) -> Void)
+  func loadArtwork(track: TrackProtocol, completion: @escaping (Data) -> Void)
 }

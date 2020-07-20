@@ -6,6 +6,8 @@
 //  Copyright © 2020 Exsertin. All rights reserved.
 //
 
+import UIKit
+
 class ITunesApiManager: ApiManager {
   private var api: Api
   
@@ -27,6 +29,16 @@ class ITunesApiManager: ApiManager {
       }
       
       completion(model!.results)
+    }
+  }
+  
+  func loadArtwork(track: TrackProtocol, completion: @escaping (Data) -> Void) {
+    guard let url = track.getArtworkPreviewUrl() else {
+      return
+    }
+    
+    api.getImage(url: url) {
+      completion($0)
     }
   }
 }
