@@ -9,7 +9,7 @@
 import UIKit
 
 class MusicPlayerViewController: UIViewController {
-  var presenter: MusicPlayerPresenter!
+  var presenter: MusicPlayerPresenterProtocol!
   
   override func viewDidLoad() {
     super.viewDidLoad()
