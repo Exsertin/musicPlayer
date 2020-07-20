@@ -7,11 +7,11 @@
 //
 
 class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
-  private var song: ITunesResult.Result
+  private var track: TrackProtocol
   private var viewDelegate: MusicPlayerViewDelegate?
   
-  init(song: ITunesResult.Result) {
-    self.song = song
+  init(track: TrackProtocol) {
+    self.track = track
   }
   
   func setViewDelegate(viewDelegate: MusicPlayerViewDelegate?) {

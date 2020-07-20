@@ -47,7 +47,7 @@ class SearchTableViewController: UITableViewController {
         return
       }
       
-      destination.presenter = MusicPlayerPresenter(song: songs[indexPath.row])
+      destination.presenter = MusicPlayerPresenter(track: songs[indexPath.row])
     default:
       return
     }
