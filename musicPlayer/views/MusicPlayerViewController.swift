@@ -16,6 +16,7 @@ class MusicPlayerViewController: UIViewController {
   @IBOutlet weak var slider: UISlider!
   @IBOutlet weak var currentTimeLabel: UILabel!
   @IBOutlet weak var endTimeLabel: UILabel!
+  @IBOutlet weak var playPauseButton: UIButton!
   
   let playTitle = "play"
   let pauseTitle = "pause"

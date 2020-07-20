@@ -175,6 +175,7 @@
                         <outlet property="collectionNameLabel" destination="hO6-Gz-KRY" id="j4c-I2-Tjd"/>
                         <outlet property="currentTimeLabel" destination="ifn-ra-KsD" id="UiW-Lb-tfi"/>
                         <outlet property="endTimeLabel" destination="MmO-Nd-OSp" id="JW5-es-Du8"/>
+                        <outlet property="playPauseButton" destination="2q6-Fk-DTZ" id="C5y-H1-y47"/>
                         <outlet property="slider" destination="uLy-fI-bzG" id="0je-ln-A1K"/>
                         <outlet property="trackNameLabel" destination="BBo-O5-C0L" id="pef-wg-ddR"/>
                     </connections>
