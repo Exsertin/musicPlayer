@@ -18,8 +18,8 @@ class MusicPlayerViewController: UIViewController {
   @IBOutlet weak var endTimeLabel: UILabel!
   @IBOutlet weak var playPauseButton: UIButton!
   
-  let playTitle = "play"
-  let pauseTitle = "pause"
+  let playTitle = "Play"
+  let pauseTitle = "Pause"
   
   var presenter: MusicPlayerPresenterProtocol!
   
@@ -52,8 +52,10 @@ extension MusicPlayerViewController: MusicPlayerViewDelegate {
   }
   
   func setPlayTitle() {
+    playPauseButton.setTitle(playTitle, for: .normal)
   }
   
   func setPauseTitle() {
+    playPauseButton.setTitle(pauseTitle, for: .normal)
   }
 }
