@@ -106,12 +106,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-rw-LxJ">
+                                <rect key="frame" x="30" y="319" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collectionName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO6-Gz-KRY">
+                                <rect key="frame" x="115" y="319" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ETd-HY-Pon" firstAttribute="leading" secondItem="I1d-y5-OUC" secondAttribute="trailing" constant="8" id="8dv-EG-17K"/>
+                            <constraint firstItem="SLb-rw-LxJ" firstAttribute="top" secondItem="UMZ-wJ-k7o" secondAttribute="bottom" constant="10" id="IFa-TJ-NA5"/>
+                            <constraint firstItem="SLb-rw-LxJ" firstAttribute="leading" secondItem="CBl-tL-zoU" secondAttribute="leadingMargin" constant="10" id="NfD-mp-XoW"/>
                             <constraint firstItem="ETd-HY-Pon" firstAttribute="top" secondItem="v8U-Fo-baj" secondAttribute="bottom" constant="39" id="OCR-if-TJZ"/>
                             <constraint firstItem="I1d-y5-OUC" firstAttribute="top" secondItem="v8U-Fo-baj" secondAttribute="bottom" constant="39" id="Rbu-K5-TS1"/>
+                            <constraint firstItem="hO6-Gz-KRY" firstAttribute="leading" secondItem="SLb-rw-LxJ" secondAttribute="trailing" constant="8" id="U1F-4V-rUq"/>
+                            <constraint firstItem="hO6-Gz-KRY" firstAttribute="top" secondItem="BBo-O5-C0L" secondAttribute="bottom" constant="10" id="Zk9-aA-QHR"/>
                             <constraint firstItem="v8U-Fo-baj" firstAttribute="top" secondItem="4UK-N5-HeJ" secondAttribute="bottom" constant="30" id="dmz-Sv-jg5"/>
                             <constraint firstItem="v8U-Fo-baj" firstAttribute="centerX" secondItem="CBl-tL-zoU" secondAttribute="centerX" id="lsa-cP-HgQ"/>
                             <constraint firstItem="BBo-O5-C0L" firstAttribute="leading" secondItem="UMZ-wJ-k7o" secondAttribute="trailing" constant="8" id="nme-4W-plx"/>
