@@ -82,11 +82,27 @@
                                     <constraint firstAttribute="width" constant="100" id="iVr-Ig-tjp"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1d-y5-OUC">
+                                <rect key="frame" x="28" y="257" width="46.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETd-HY-Pon">
+                                <rect key="frame" x="82.5" y="257" width="84.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ETd-HY-Pon" firstAttribute="leading" secondItem="I1d-y5-OUC" secondAttribute="trailing" constant="8" id="8dv-EG-17K"/>
+                            <constraint firstItem="ETd-HY-Pon" firstAttribute="top" secondItem="v8U-Fo-baj" secondAttribute="bottom" constant="39" id="OCR-if-TJZ"/>
+                            <constraint firstItem="I1d-y5-OUC" firstAttribute="top" secondItem="v8U-Fo-baj" secondAttribute="bottom" constant="39" id="Rbu-K5-TS1"/>
                             <constraint firstItem="v8U-Fo-baj" firstAttribute="top" secondItem="4UK-N5-HeJ" secondAttribute="bottom" constant="30" id="dmz-Sv-jg5"/>
                             <constraint firstItem="v8U-Fo-baj" firstAttribute="centerX" secondItem="CBl-tL-zoU" secondAttribute="centerX" id="lsa-cP-HgQ"/>
+                            <constraint firstItem="I1d-y5-OUC" firstAttribute="leading" secondItem="CBl-tL-zoU" secondAttribute="leadingMargin" constant="8" id="t1b-Da-e4C"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Music Player" id="PJB-op-FtL"/>
