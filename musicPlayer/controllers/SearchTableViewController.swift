@@ -26,9 +26,7 @@ class SearchTableViewController: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    if let player = self.player {
-      player.pause()
-    }
+    player?.pause()
     
     guard let indexPath = self.tableView.indexPathForSelectedRow else {
       return
