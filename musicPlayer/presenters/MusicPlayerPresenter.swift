@@ -9,15 +9,14 @@
 import MediaPlayer
 
 class MusicPlayerPresenter: MusicPlayerPresenterProtocol {
-  var player: AVPlayer!
-  
+  private var player: AVPlayer!
   private var track: TrackProtocol
   private var trackMaxTime: Float
   weak private var viewDelegate: MusicPlayerViewDelegate?
   
-  init(track: TrackProtocol) {
+  init(player: AVPlayer, track: TrackProtocol) {
+    self.player = player
     self.track = track
-    player = AVPlayer(url: URL(string: track.getTrackPreviewUrl())!)
     trackMaxTime = Float(player.currentItem?.asset.duration.seconds ?? 0).rounded()
   }
   

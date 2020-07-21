@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class SearchTableViewController: UITableViewController {
   @IBOutlet var searchBar: UISearchBar!
@@ -16,6 +17,7 @@ class SearchTableViewController: UITableViewController {
   var tracks: [TrackProtocol] = []
   
   private var activityIndicator: UIActivityIndicatorView!
+  private var player: AVPlayer?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -24,6 +26,10 @@ class SearchTableViewController: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    if let player = self.player {
+      player.pause()
+    }
+    
     guard let indexPath = self.tableView.indexPathForSelectedRow else {
       return
     }
@@ -65,7 +71,9 @@ class SearchTableViewController: UITableViewController {
         return
       }
       
-      destination.presenter = MusicPlayerPresenter(track: tracks[indexPath.row])
+      let track = tracks[indexPath.row]
+      player = AVPlayer(url: URL(string: track.getTrackPreviewUrl())!)
+      destination.presenter = MusicPlayerPresenter(player: player!, track: track)
     default:
       return
     }
