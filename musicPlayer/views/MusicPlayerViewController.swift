@@ -38,6 +38,7 @@ class MusicPlayerViewController: UIViewController {
   }
 }
 
+// MARK: - MusicPlayerViewDelegate
 extension MusicPlayerViewController: MusicPlayerViewDelegate {
   func setArtworkImage(data: Data) {
     artworkImageView.image = UIImage(data: data)

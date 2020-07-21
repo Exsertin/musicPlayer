@@ -78,6 +78,7 @@ class SearchTableViewController: UITableViewController {
   }
 }
 
+// MARK: - UISearchBarDelegate
 extension SearchTableViewController: UISearchBarDelegate {
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     let minLen = 2

@@ -26,6 +26,7 @@ struct ITunesResult: Decodable {
   var results: [Result]
 }
 
+// MARK: - TrackProtocol
 extension ITunesResult.Result: TrackProtocol {
   func getArtworkPreviewUrl() -> String? {
     return artworkUrl100
