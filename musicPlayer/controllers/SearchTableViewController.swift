@@ -83,7 +83,7 @@ extension SearchTableViewController: UISearchBarDelegate {
   }
   
   private func searchTracks(str: String) {
-    ITunesApiManager(ITunesApi()).findSongs(searchText: str) {
+    ITunesApiManager(ITunesApi()).findTracks(searchText: str) {
       self.tracks = $0
       self.tableView.reloadData()
     }

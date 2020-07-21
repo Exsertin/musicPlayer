@@ -15,7 +15,7 @@ class ITunesApiManager: ApiManager {
     self.api = api
   }
   
-  func findSongs(searchText: String, completion: @escaping ([ITunesResult.Result]) -> Void) {
+  func findTracks(searchText: String, completion: @escaping ([ITunesResult.Result]) -> Void) {
     api.getResult(searchText: searchText) {
       let decoder = JsonApiResponseDecoder<ITunesResult>()
       let model: ITunesResult?
