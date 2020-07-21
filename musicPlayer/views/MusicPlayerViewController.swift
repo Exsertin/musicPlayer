@@ -96,16 +96,18 @@ class MusicPlayerViewController: UIViewController {
     let btnPlay = UIButton()
     btnPlay.setTitle(playTitle, for: .normal)
     btnPlay.setTitleColor(.blue, for: .normal)
+    btnPlay.addTarget(self, action: #selector(self.playPauseAction(_:)), for: .touchUpInside)
     playPauseButton = btnPlay
     self.view.addSubview(playPauseButton)
     playPauseButton.snp.makeConstraints { (make) -> Void in
       make.centerX.equalTo(self.view)
-            make.size.equalTo(CGSize(width: 100, height: 100))
+      make.size.equalTo(CGSize(width: 100, height: 100))
       make.bottom.equalTo(self.bottomLayoutGuide.snp.top).offset(30)
     }
     
     let sldLeftRightOffset = 20
     let sldr = UISlider()
+    sldr.addTarget(self, action: #selector(self.sliderValueChangedAction(_:)), for: .valueChanged)
     slider = sldr
     self.view.addSubview(slider)
     slider.snp_makeConstraints { (make) -> Void in
@@ -135,11 +137,11 @@ class MusicPlayerViewController: UIViewController {
     }
   }
   
-  @IBAction func playPauseAction(_ sender: UIButton) {
+  @objc func playPauseAction(_ sender: UIButton) {
     presenter.playPausePlayer()
   }
   
-  @IBAction func sliderValueChangedAction(_ sender: UISlider) {
+  @objc func sliderValueChangedAction(_ sender: UISlider) {
     presenter.changePlayerTimeLine(value: sender.value)
   }
 }
