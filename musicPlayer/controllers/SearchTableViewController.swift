@@ -85,7 +85,7 @@ extension SearchTableViewController: UISearchBarDelegate {
     
     searchTracks(str: searchText.lowercased())
     cancelTargetNoTracks()
-    self.perform(#selector(noTracks), with: nil, afterDelay: 3)
+    self.perform(#selector(noTracks), with: nil, afterDelay: 2)
   }
   
   private func cancelTargetNoTracks() {
