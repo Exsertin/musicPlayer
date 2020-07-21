@@ -12,4 +12,5 @@ protocol TrackProtocol {
   func getArtistName() -> String
   func getTrackName() -> String
   func getCollectionName() -> String
+  func isTrackValid() -> Bool
 }

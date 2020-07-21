@@ -13,7 +13,7 @@ struct ITunesResult: Decodable {
     var wrapperType: String
     var artistName: String
     var collectionName: String?
-    var trackName: String
+    var trackName: String?
     var previewUrl: String?
     var artworkUrl100: String?
     
@@ -40,10 +40,14 @@ extension ITunesResult.Result: TrackProtocol {
   }
   
   func getTrackName() -> String {
-    return trackName
+    return trackName!
   }
   
   func getCollectionName() -> String {
     return collectionName!
+  }
+  
+  func isTrackValid() -> Bool {
+    return previewUrl != nil
   }
 }
