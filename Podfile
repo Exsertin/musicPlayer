@@ -6,5 +6,6 @@ target 'musicPlayer' do
 
   # Pods for musicPlayer
   pod 'Alamofire', '~> 4.9.0'
+  pod 'SnapKit', '~> 4.0'
 
 end
