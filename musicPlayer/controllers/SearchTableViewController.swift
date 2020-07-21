@@ -13,7 +13,7 @@ class SearchTableViewController: UITableViewController {
   
   let segueMusicPlayerId: String = "showMusicPlayer"
   
-  var songs: [ITunesResult.Result] = []
+  var tracks: [TrackProtocol] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,13 +21,13 @@ class SearchTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return songs.count
+    return tracks.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-    let song = songs[indexPath.row]
-    cell.textLabel?.text = "\(song.artistName) - \(song.trackName)"
+    let track = tracks[indexPath.row]
+    cell.textLabel?.text = "\(track.getArtistName()) - \(track.getTrackName())"
     
     return cell
   }
@@ -47,7 +47,7 @@ class SearchTableViewController: UITableViewController {
         return
       }
       
-      destination.presenter = MusicPlayerPresenter(track: songs[indexPath.row])
+      destination.presenter = MusicPlayerPresenter(track: tracks[indexPath.row])
     default:
       return
     }
@@ -59,32 +59,32 @@ extension SearchTableViewController: UISearchBarDelegate {
     let minLen = 2
     
     guard searchText.count > minLen else {
-      cancelTargetNoSongs()
-      songs = []
+      cancelTargetNoTracks()
+      tracks = []
       self.tableView.reloadData()
       return
     }
     
-    searchSongs(str: searchText.lowercased())
-    cancelTargetNoSongs()
-    self.perform(#selector(noSongs), with: nil, afterDelay: 3)
+    searchTracks(str: searchText.lowercased())
+    cancelTargetNoTracks()
+    self.perform(#selector(noTracks), with: nil, afterDelay: 3)
   }
   
-  private func cancelTargetNoSongs() {
-    NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(noSongs), object: nil)
+  private func cancelTargetNoTracks() {
+    NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(noTracks), object: nil)
   }
   
-  @objc func noSongs() {
-    guard songs.isEmpty else {
+  @objc func noTracks() {
+    guard tracks.isEmpty else {
       return
     }
     
-    present(AlertCreator.notification(message: "No songs found"), animated: true, completion: nil)
+    present(AlertCreator.notification(message: "No tracks found"), animated: true, completion: nil)
   }
   
-  private func searchSongs(str: String) {
+  private func searchTracks(str: String) {
     ITunesApiManager(ITunesApi()).findSongs(searchText: str) {
-      self.songs = $0
+      self.tracks = $0
       self.tableView.reloadData()
     }
   }
