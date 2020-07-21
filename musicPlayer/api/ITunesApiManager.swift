@@ -11,7 +11,7 @@ import UIKit
 class ITunesApiManager: ApiManager {
   private var api: Api
   
-  init(_ api: Api) {
+  required init(_ api: Api) {
     self.api = api
   }
   

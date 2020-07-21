@@ -9,6 +9,7 @@
 import UIKit
 
 protocol ApiManager {
+  init(_ api: Api)
   func findTracks(searchText: String, completion: @escaping ([ITunesResult.Result]) -> Void)
   func loadArtwork(track: TrackProtocol, completion: @escaping (Data) -> Void)
 }
