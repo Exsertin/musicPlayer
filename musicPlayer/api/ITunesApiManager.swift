@@ -28,7 +28,7 @@ class ITunesApiManager: ApiManager {
         return
       }
       
-      completion(model!.results)
+      completion(model!.results.filter {$0.isTrack() && $0.isTrackValid()})
     }
   }
   
