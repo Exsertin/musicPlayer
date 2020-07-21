@@ -23,6 +23,14 @@ class SearchTableViewController: UITableViewController {
     viewDidLoadActivityIndicator()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    guard let indexPath = self.tableView.indexPathForSelectedRow else {
+      return
+    }
+    
+    self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+  }
+  
   func viewDidLoadActivityIndicator() {
     activityIndicator = UIActivityIndicatorView()
     activityIndicator.color = .red
