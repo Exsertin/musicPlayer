@@ -15,9 +15,19 @@ class SearchTableViewController: UITableViewController {
   
   var tracks: [TrackProtocol] = []
   
+  private var activityIndicator: UIActivityIndicatorView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     searchBar.delegate = self
+    viewDidLoadActivityIndicator()
+  }
+  
+  func viewDidLoadActivityIndicator() {
+    activityIndicator = UIActivityIndicatorView()
+    activityIndicator.color = .red
+    self.tableView.addSubview(activityIndicator)
+    activityIndicator.center = self.tableView.center
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +93,9 @@ extension SearchTableViewController: UISearchBarDelegate {
   }
   
   private func searchTracks(str: String) {
+    self.activityIndicator.startAnimating()
     ITunesApiManager(ITunesApi()).findTracks(searchText: str) {
+      self.activityIndicator.stopAnimating()
       self.tracks = $0
       self.tableView.reloadData()
     }
