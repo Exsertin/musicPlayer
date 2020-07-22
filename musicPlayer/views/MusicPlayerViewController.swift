@@ -34,7 +34,6 @@ class MusicPlayerViewController: UIViewController {
   private func genViews() {
     let image = UIImageView()
     artworkImageView = image
-    artworkImageView.backgroundColor = .red
     self.view.addSubview(artworkImageView)
     artworkImageView.snp.makeConstraints { (make) -> Void in
       make.top.equalTo(self.topLayoutGuide.snp.bottom).offset(30)
@@ -52,7 +51,6 @@ class MusicPlayerViewController: UIViewController {
     
     let lblArtistName = UILabel()
     artistNameLabel = lblArtistName
-    artistNameLabel.text = "Artist:"
     self.view.addSubview(artistNameLabel)
     artistNameLabel.snp.makeConstraints { (make) -> Void in
       make.top.equalTo(self.artworkImageView.snp_bottom).offset(39)
@@ -69,7 +67,6 @@ class MusicPlayerViewController: UIViewController {
     
     let lblTrackName = UILabel()
     trackNameLabel = lblTrackName
-    trackNameLabel.text = "Track:"
     self.view.addSubview(trackNameLabel)
     trackNameLabel.snp.makeConstraints { (make) -> Void in
       make.top.equalTo(self.artistNameLabel.snp_bottom).offset(10)
@@ -86,7 +83,6 @@ class MusicPlayerViewController: UIViewController {
     
     let lblCollectionName = UILabel()
     collectionNameLabel = lblCollectionName
-    collectionNameLabel.text = "Collection:"
     self.view.addSubview(collectionNameLabel)
     collectionNameLabel.snp.makeConstraints { (make) -> Void in
       make.top.equalTo(self.trackNameLabel.snp_bottom).offset(10)
@@ -117,7 +113,6 @@ class MusicPlayerViewController: UIViewController {
     }
     
     let lblCurrentTime = UILabel()
-    lblCurrentTime.text = "currentTime"
     currentTimeLabel = lblCurrentTime
     self.view.addSubview(currentTimeLabel)
     
@@ -127,7 +122,6 @@ class MusicPlayerViewController: UIViewController {
     }
     
     let lblEndTime = UILabel()
-    lblEndTime.text = "entTime"
     endTimeLabel = lblEndTime
     self.view.addSubview(endTimeLabel)
     
