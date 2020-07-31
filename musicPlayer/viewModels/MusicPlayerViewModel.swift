@@ -41,13 +41,8 @@ class MusicPlayerViewModel: MusicPlayerViewModelProtocol {
       isPause = player.rate == 0
     }
     
-    if isPause {
-      isPlayRelay.accept(true)
-      player.play()
-    } else {
-      isPlayRelay.accept(false)
-      player.pause()
-    }
+    isPlayRelay.accept(isPause)
+    isPause ? player.play() : player.pause()
   }
   
   func isPlay() -> PublishRelay<Bool> {
