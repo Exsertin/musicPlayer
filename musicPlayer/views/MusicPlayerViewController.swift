@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import RxCocoa
 
 class MusicPlayerViewController: UIViewController {
   weak var artworkImageView: UIImageView!
@@ -90,7 +91,6 @@ class MusicPlayerViewController: UIViewController {
     let btnPlay = UIButton()
     btnPlay.setTitle(playTitle, for: .normal)
     btnPlay.setTitleColor(.blue, for: .normal)
-    btnPlay.addTarget(self, action: #selector(self.playPauseAction(_:)), for: .touchUpInside)
     playPauseButton = btnPlay
     self.view.addSubview(playPauseButton)
     playPauseButton.snp.makeConstraints { (make) -> Void in
@@ -127,10 +127,14 @@ class MusicPlayerViewController: UIViewController {
       $0.top.equalTo(self.slider.snp_bottom).offset(5)
       $0.trailing.equalTo(self.view).offset(-sldLeftRightOffset)
     }
+    
+    initBindings()
   }
   
-  @objc func playPauseAction(_ sender: UIButton) {
-//    viewModel.playPausePlayer()
+  func initBindings() {
+    self.playPauseButton.rx.tap.subscribe(onNext: { [weak self] in
+        self?.viewModel.playPausePlayer()
+      })
   }
   
   @objc func sliderValueChangedAction(_ sender: UISlider) {

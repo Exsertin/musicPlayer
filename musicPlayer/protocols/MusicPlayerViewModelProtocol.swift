@@ -7,5 +7,5 @@
 //
 
 protocol MusicPlayerViewModelProtocol {
-  
+  func playPausePlayer()
 }
