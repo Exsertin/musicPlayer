@@ -146,17 +146,21 @@ class MusicPlayerViewController: UIViewController {
     viewModel.loadArtwork().subscribe(onSuccess: { [weak self] data in
       self?.artworkImageView.image = UIImage(data: data)
     })
+    
     playPauseButton.rx.tap.subscribe(onNext: { [weak self] in
       self?.viewModel.playPausePlayer()
     })
+    
     viewModel.isPlay().subscribe(onNext: { [weak self] isPlay in
       guard let self = self else { return }
       let title = isPlay ? self.pauseTitle : self.playTitle
       self.playPauseButton.setTitle(title, for: .normal)
     })
+    
     viewModel.currentTime.subscribe(onNext: { [weak self] text in
       self?.currentTimeLabel.text = text
     }).disposed(by: disposeBag)
+    
     viewModel.endTime.subscribe(onNext: { [weak self] text in
       self?.endTimeLabel.text = text
     }).disposed(by: disposeBag)
