@@ -11,6 +11,7 @@ import RxRelay
 
 protocol MusicPlayerViewModelProtocol {
   var track: TrackProtocol { get }
+  var sliderValue: BehaviorRelay<Float> { get }
   var currentTime: BehaviorRelay<String> { get }
   var endTime: BehaviorRelay<String> { get }
   
