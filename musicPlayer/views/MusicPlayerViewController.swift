@@ -128,11 +128,18 @@ class MusicPlayerViewController: UIViewController {
       $0.trailing.equalTo(self.view).offset(-sldLeftRightOffset)
     }
     
+    fillLabels()
     initBindings()
   }
   
+  func fillLabels() {
+    artistNameLabel.text = viewModel.track.getArtistName()
+    trackNameLabel.text = viewModel.track.getTrackName()
+    collectionNameLabel.text = viewModel.track.getCollectionName()
+  }
+  
   func initBindings() {
-    self.playPauseButton.rx.tap.subscribe(onNext: { [weak self] in
+    playPauseButton.rx.tap.subscribe(onNext: { [weak self] in
         self?.viewModel.playPausePlayer()
       })
   }

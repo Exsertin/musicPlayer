@@ -7,5 +7,7 @@
 //
 
 protocol MusicPlayerViewModelProtocol {
+  var track: TrackProtocol { get }
+  
   func playPausePlayer()
 }
