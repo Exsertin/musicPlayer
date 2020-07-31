@@ -30,27 +30,40 @@ class MusicPlayerViewModel: MusicPlayerViewModelProtocol {
     addPeriodicToPlayer()
   }
   
-   private func addPeriodicToPlayer() {
-      let forInterval = CMTime(seconds: 1, preferredTimescale: 1000)
-      player.addPeriodicTimeObserver(forInterval: forInterval, queue: DispatchQueue.main) { [weak self] time in
-
-        guard let self = self else {
-          return
-        }
-        
-        let seconds = time.seconds.rounded()
-        self.currentTime.accept(TimeTranslator.translateSecondsToMinutes(seconds: Int(seconds)))
-        self.sliderValue.accept(Float(time.seconds))
-        let endSeconds = Int(self.trackMaxTime) - Int(seconds)
-        let endTime = TimeTranslator.translateSecondsToMinutes(seconds: endSeconds)
-        self.endTime.accept("\(endTime)")
-        
-        if self.isSliderFinish() {
-          self.isPlayRelay.accept(false)
-          self.player.seek(to: .zero)
-        }
+  private func addPeriodicToPlayer() {
+    let forInterval = CMTime(seconds: 1, preferredTimescale: 1000)
+    player.addPeriodicTimeObserver(forInterval: forInterval, queue: DispatchQueue.main) { [weak self] time in
+      
+      guard let self = self else {
+        return
+      }
+      
+      let seconds = time.seconds.rounded()
+      self.currentTime.accept(TimeTranslator.translateSecondsToMinutes(seconds: Int(seconds)))
+      self.sliderValue.accept(Float(time.seconds))
+      let endSeconds = Int(self.trackMaxTime) - Int(seconds)
+      let endTime = TimeTranslator.translateSecondsToMinutes(seconds: endSeconds)
+      self.endTime.accept("\(endTime)")
+      
+      if self.isSliderFinish() {
+        self.isPlayRelay.accept(false)
+        self.player.seek(to: .zero)
       }
     }
+  }
+  
+  func changePlayerTimeLine(value: Float) {
+    player.seek(to: CMTime(seconds: Double(value), preferredTimescale: 1000)) { [weak self] _ in
+      guard let self = self else {
+        return
+      }
+      
+      self.currentTime.accept(TimeTranslator.translateSecondsToMinutes(seconds: Int(value)))
+      let endSeconds = Int(self.trackMaxTime) - Int(value)
+      let endTime = TimeTranslator.translateSecondsToMinutes(seconds: endSeconds)
+      self.endTime.accept(endTime)
+    }
+  }
   
   func loadArtwork() -> Single<Data> {
     return Single<Data>.create { single in

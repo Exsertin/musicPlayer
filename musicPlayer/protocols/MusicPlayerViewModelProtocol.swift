@@ -15,6 +15,7 @@ protocol MusicPlayerViewModelProtocol {
   var currentTime: BehaviorRelay<String> { get }
   var endTime: BehaviorRelay<String> { get }
   
+  func changePlayerTimeLine(value: Float)
   func playPausePlayer()
   func loadArtwork() -> Single<Data>
   func isPlay() -> PublishRelay<Bool>
