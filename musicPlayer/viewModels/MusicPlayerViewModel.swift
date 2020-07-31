@@ -13,12 +13,18 @@ import RxRelay
 class MusicPlayerViewModel: MusicPlayerViewModelProtocol {
   var player: AVPlayer!
   var track: TrackProtocol
+  var currentTime: BehaviorRelay<String>
+  var endTime: BehaviorRelay<String>
   
+  private var trackMaxTime: Float
   private var isPlayRelay: PublishRelay<Bool> = PublishRelay<Bool>()
   
   init(player: AVPlayer, track: TrackProtocol) {
     self.player = player
     self.track = track
+    trackMaxTime = Float(player.currentItem?.asset.duration.seconds ?? 0).rounded()
+    currentTime = BehaviorRelay<String>(value: "0:00")
+    endTime = BehaviorRelay<String>(value: TimeTranslator.translateSecondsToMinutes(seconds: Int(trackMaxTime)))
   }
   
   func loadArtwork() -> Single<Data> {
