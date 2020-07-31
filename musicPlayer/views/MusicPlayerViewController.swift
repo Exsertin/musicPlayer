@@ -159,7 +159,7 @@ class MusicPlayerViewController: UIViewController {
     }).disposed(by: disposeBag)
     viewModel.endTime.subscribe(onNext: { [weak self] text in
       self?.endTimeLabel.text = text
-      }).disposed(by: disposeBag)
+    }).disposed(by: disposeBag)
     
     viewModel.sliderValue.subscribe(onNext: { [weak self] value in
       self?.slider.value = value
@@ -167,7 +167,7 @@ class MusicPlayerViewController: UIViewController {
   }
   
   @objc func sliderValueChangedAction(_ sender: UISlider) {
-    //    viewModel.changePlayerTimeLine(value: sender.value)
+    viewModel.changePlayerTimeLine(value: sender.value)
   }
 }
 
