@@ -22,13 +22,11 @@ class MusicPlayerViewController: UIViewController {
   let playTitle = "Play"
   let pauseTitle = "Pause"
   
-  var presenter: MusicPlayerPresenterProtocol!
+  var viewModel: MusicPlayerViewModelProtocol!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     genViews()
-    presenter.setViewDelegate(viewDelegate: self)
-    presenter.viewDidLoadDelegate()
   }
   
   private func genViews() {
@@ -132,11 +130,11 @@ class MusicPlayerViewController: UIViewController {
   }
   
   @objc func playPauseAction(_ sender: UIButton) {
-    presenter.playPausePlayer()
+//    viewModel.playPausePlayer()
   }
   
   @objc func sliderValueChangedAction(_ sender: UISlider) {
-    presenter.changePlayerTimeLine(value: sender.value)
+//    viewModel.changePlayerTimeLine(value: sender.value)
   }
 }
 

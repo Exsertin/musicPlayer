@@ -6,6 +6,9 @@
 //  Copyright © 2020 Exsertin. All rights reserved.
 //
 
+import MediaPlayer
+
 struct MusicPlayerViewModel: MusicPlayerViewModelProtocol {
-  
+  var player: AVPlayer!
+  var track: TrackProtocol
 }

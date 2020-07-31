@@ -71,7 +71,7 @@ class SearchTableViewController: UITableViewController {
       
       let track = tracks[indexPath.row]
       player = AVPlayer(url: URL(string: track.getTrackPreviewUrl())!)
-      destination.presenter = MusicPlayerPresenter(player: player!, track: track)
+      destination.viewModel = MusicPlayerViewModel(player: player!, track: track)
     default:
       return
     }
