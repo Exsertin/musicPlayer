@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7980A336E4812734FE2494F2 /* Pods_musicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF2F918EEAA52671E868C03 /* Pods_musicPlayer.framework */; };
+		F154DACF24D3F3D3008297FE /* MusicPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154DACE24D3F3D3008297FE /* MusicPlayerViewModel.swift */; };
+		F154DAD124D3F47A008297FE /* MusicPlayerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154DAD024D3F47A008297FE /* MusicPlayerViewModelProtocol.swift */; };
 		F1B7313F24C4C17D00F3FE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7313E24C4C17D00F3FE6B /* AppDelegate.swift */; };
 		F1B7314124C4C17D00F3FE6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7314024C4C17D00F3FE6B /* SceneDelegate.swift */; };
 		F1B7314624C4C17D00F3FE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B7314424C4C17D00F3FE6B /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		30A7454EF72740E6ED906E18 /* Pods-musicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer.debug.xcconfig"; path = "Target Support Files/Pods-musicPlayer/Pods-musicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		3CE7929C605511F496EE4245 /* Pods-musicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer.release.xcconfig"; path = "Target Support Files/Pods-musicPlayer/Pods-musicPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		F154DACE24D3F3D3008297FE /* MusicPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewModel.swift; sourceTree = "<group>"; };
+		F154DAD024D3F47A008297FE /* MusicPlayerViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewModelProtocol.swift; sourceTree = "<group>"; };
 		F1B7313B24C4C17D00F3FE6B /* musicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B7313E24C4C17D00F3FE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B7314024C4C17D00F3FE6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F154DACD24D3E86B008297FE /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F154DACE24D3F3D3008297FE /* MusicPlayerViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		F1B7313224C4C17D00F3FE6B = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 				F1B7315224C4CE5F00F3FE6B /* controllers */,
 				F1B7316A24C56C6B00F3FE6B /* presenters */,
 				F1B7316724C5683F00F3FE6B /* views */,
+				F154DACD24D3E86B008297FE /* viewModels */,
 				F1B7317524C61EDB00F3FE6B /* helpers */,
 				F1B7313E24C4C17D00F3FE6B /* AppDelegate.swift */,
 				F1B7314024C4C17D00F3FE6B /* SceneDelegate.swift */,
@@ -164,6 +177,7 @@
 			children = (
 				F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */,
 				F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */,
+				F154DAD024D3F47A008297FE /* MusicPlayerViewModelProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -316,9 +330,11 @@
 				F1B7316224C4DEB100F3FE6B /* ApiResponseDecoder.swift in Sources */,
 				F1B7317724C61EEF00F3FE6B /* TimeTranslator.swift in Sources */,
 				F1B7316424C4DED800F3FE6B /* JsonApiResponseDecoder.swift in Sources */,
+				F154DAD124D3F47A008297FE /* MusicPlayerViewModelProtocol.swift in Sources */,
 				F1B7315824C4D4C900F3FE6B /* ITunesResult.swift in Sources */,
 				F1B7313F24C4C17D00F3FE6B /* AppDelegate.swift in Sources */,
 				F1B7317424C5793000F3FE6B /* TrackProtocol.swift in Sources */,
+				F154DACF24D3F3D3008297FE /* MusicPlayerViewModel.swift in Sources */,
 				F1B7315E24C4DD3E00F3FE6B /* ApiManager.swift in Sources */,
 				F1B7316C24C56CBE00F3FE6B /* MusicPlayerPresenter.swift in Sources */,
 				F1B7316624C4F55400F3FE6B /* AlertCreator.swift in Sources */,
