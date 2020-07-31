@@ -143,12 +143,17 @@ class MusicPlayerViewController: UIViewController {
       self?.artworkImageView.image = UIImage(data: data)
     })
     playPauseButton.rx.tap.subscribe(onNext: { [weak self] in
-        self?.viewModel.playPausePlayer()
-      })
+      self?.viewModel.playPausePlayer()
+    })
+    viewModel.isPlay().subscribe(onNext: { [weak self] isPlay in
+      guard let self = self else { return }
+      let title = isPlay ? self.pauseTitle : self.playTitle
+      self.playPauseButton.setTitle(title, for: .normal)
+    })
   }
   
   @objc func sliderValueChangedAction(_ sender: UISlider) {
-//    viewModel.changePlayerTimeLine(value: sender.value)
+    //    viewModel.changePlayerTimeLine(value: sender.value)
   }
 }
 

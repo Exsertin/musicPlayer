@@ -7,10 +7,12 @@
 //
 
 import RxSwift
+import RxRelay
 
 protocol MusicPlayerViewModelProtocol {
   var track: TrackProtocol { get }
   
   func playPausePlayer()
   func loadArtwork() -> Single<Data>
+  func isPlay() -> PublishRelay<Bool>
 }

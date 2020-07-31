@@ -8,10 +8,18 @@
 
 import MediaPlayer
 import RxSwift
+import RxRelay
 
-struct MusicPlayerViewModel: MusicPlayerViewModelProtocol {
+class MusicPlayerViewModel: MusicPlayerViewModelProtocol {
   var player: AVPlayer!
   var track: TrackProtocol
+  
+  private var isPlayRelay: PublishRelay<Bool> = PublishRelay<Bool>()
+  
+  init(player: AVPlayer, track: TrackProtocol) {
+    self.player = player
+    self.track = track
+  }
   
   func loadArtwork() -> Single<Data> {
     return Single<Data>.create { single in
@@ -34,9 +42,15 @@ struct MusicPlayerViewModel: MusicPlayerViewModelProtocol {
     }
     
     if isPause {
+      isPlayRelay.accept(true)
       player.play()
     } else {
+      isPlayRelay.accept(false)
       player.pause()
     }
+  }
+  
+  func isPlay() -> PublishRelay<Bool> {
+    return isPlayRelay
   }
 }
