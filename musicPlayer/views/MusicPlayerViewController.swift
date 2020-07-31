@@ -160,6 +160,10 @@ class MusicPlayerViewController: UIViewController {
     viewModel.endTime.subscribe(onNext: { [weak self] text in
       self?.endTimeLabel.text = text
       }).disposed(by: disposeBag)
+    
+    viewModel.sliderValue.subscribe(onNext: { [weak self] value in
+      self?.slider.value = value
+    }).disposed(by: disposeBag)
   }
   
   @objc func sliderValueChangedAction(_ sender: UISlider) {
