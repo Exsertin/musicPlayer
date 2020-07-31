@@ -26,7 +26,6 @@
 		F1B7316624C4F55400F3FE6B /* AlertCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316524C4F55400F3FE6B /* AlertCreator.swift */; };
 		F1B7316924C5687800F3FE6B /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316824C5687800F3FE6B /* MusicPlayerViewController.swift */; };
 		F1B7316F24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */; };
-		F1B7317124C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */; };
 		F1B7317424C5793000F3FE6B /* TrackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317324C5793000F3FE6B /* TrackProtocol.swift */; };
 		F1B7317724C61EEF00F3FE6B /* TimeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7317624C61EEF00F3FE6B /* TimeTranslator.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +53,6 @@
 		F1B7316524C4F55400F3FE6B /* AlertCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreator.swift; sourceTree = "<group>"; };
 		F1B7316824C5687800F3FE6B /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewDelegate.swift; sourceTree = "<group>"; };
-		F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterProtocol.swift; sourceTree = "<group>"; };
 		F1B7317324C5793000F3FE6B /* TrackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackProtocol.swift; sourceTree = "<group>"; };
 		F1B7317624C61EEF00F3FE6B /* TimeTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTranslator.swift; sourceTree = "<group>"; };
 		FBF2F918EEAA52671E868C03 /* Pods_musicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				F1B7316E24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift */,
-				F1B7317024C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift */,
 				F154DAD024D3F47A008297FE /* MusicPlayerViewModelProtocol.swift */,
 			);
 			path = protocols;
@@ -327,7 +324,6 @@
 				F1B7315E24C4DD3E00F3FE6B /* ApiManager.swift in Sources */,
 				F1B7316624C4F55400F3FE6B /* AlertCreator.swift in Sources */,
 				F1B7316924C5687800F3FE6B /* MusicPlayerViewController.swift in Sources */,
-				F1B7317124C5755900F3FE6B /* MusicPlayerPresenterProtocol.swift in Sources */,
 				F1B7315424C4CE8900F3FE6B /* SearchTableViewController.swift in Sources */,
 				F1B7316F24C56FFF00F3FE6B /* MusicPlayerViewDelegate.swift in Sources */,
 				F1B7315A24C4D8BE00F3FE6B /* Api.swift in Sources */,
