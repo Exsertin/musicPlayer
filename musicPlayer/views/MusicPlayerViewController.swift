@@ -105,6 +105,7 @@ class MusicPlayerViewController: UIViewController {
     let sldLeftRightOffset = 20
     let sldr = UISlider()
     sldr.addTarget(self, action: #selector(self.sliderValueChangedAction(_:)), for: .valueChanged)
+    sldr.maximumValue = viewModel.getSliderMaxValue()
     slider = sldr
     self.view.addSubview(slider)
     slider.snp_makeConstraints { (make) -> Void in

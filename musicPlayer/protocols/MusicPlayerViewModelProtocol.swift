@@ -17,4 +17,5 @@ protocol MusicPlayerViewModelProtocol {
   func playPausePlayer()
   func loadArtwork() -> Single<Data>
   func isPlay() -> PublishRelay<Bool>
+  func getSliderMaxValue() -> Float
 }

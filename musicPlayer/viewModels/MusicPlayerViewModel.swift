@@ -54,4 +54,8 @@ class MusicPlayerViewModel: MusicPlayerViewModelProtocol {
   func isPlay() -> PublishRelay<Bool> {
     return isPlayRelay
   }
+  
+  func getSliderMaxValue() -> Float {
+    return trackMaxTime
+  }
 }
