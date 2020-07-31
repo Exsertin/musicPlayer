@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import RxCocoa
+import RxSwift
 
 class MusicPlayerViewController: UIViewController {
   weak var artworkImageView: UIImageView!
@@ -24,6 +25,8 @@ class MusicPlayerViewController: UIViewController {
   let pauseTitle = "Pause"
   
   var viewModel: MusicPlayerViewModelProtocol!
+  var disposeBag = DisposeBag()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -150,6 +153,12 @@ class MusicPlayerViewController: UIViewController {
       let title = isPlay ? self.pauseTitle : self.playTitle
       self.playPauseButton.setTitle(title, for: .normal)
     })
+    viewModel.currentTime.subscribe(onNext: { [weak self] text in
+      self?.currentTimeLabel.text = text
+    }).disposed(by: disposeBag)
+    viewModel.endTime.subscribe(onNext: { [weak self] text in
+      self?.endTimeLabel.text = text
+      }).disposed(by: disposeBag)
   }
   
   @objc func sliderValueChangedAction(_ sender: UISlider) {
