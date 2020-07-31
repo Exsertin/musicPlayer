@@ -139,6 +139,9 @@ class MusicPlayerViewController: UIViewController {
   }
   
   func initBindings() {
+    viewModel.loadArtwork().subscribe(onSuccess: { [weak self] data in
+      self?.artworkImageView.image = UIImage(data: data)
+    })
     playPauseButton.rx.tap.subscribe(onNext: { [weak self] in
         self?.viewModel.playPausePlayer()
       })
